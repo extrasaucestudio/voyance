@@ -10,14 +10,19 @@ function s(n){let r=0;const o=i=>{r=i,n.innerHTML=`Voir nos forfaits`};n.addEven
     <strong>Bienvenue</strong>
     
     </p>
-    <div class="card">
-    <a href="https://buy.stripe.com/bIY4i7cDTaDJe5OcMN" target="_blank">
-    <button id="myNav" type="button"></button>
-  </a>
+    <div id="myNav" class="card">
+    xxxxxxxxx
+    <button id="counter" type="button"></button>
+  
     </div>
   
   <!--
-
+  <div class="card">
+  <a href="https://buy.stripe.com/14k8yn6fvdPVgdW4gi" target="_blank">
+  <button id="myNav" type="button"></button>
+</a>
+  </div>
+  
   -->
      
     
