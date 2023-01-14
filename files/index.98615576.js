@@ -12,7 +12,7 @@ function s(n){let r=0;const o=i=>{r=i,n.innerHTML=`Voir nos forfaits`};n.addEven
     </p>
     <div class="card">
     <a href="https://buy.stripe.com/bIY4i7cDTaDJe5OcMN" target="_blank">
-    <button id="counter" type="button"></button>
+    <button id="myNav" type="button"></button>
   </a>
     </div>
   
