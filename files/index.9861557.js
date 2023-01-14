@@ -4,7 +4,7 @@ return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolic
 function s(n){let r=0;const o=i=>{r=i,n.innerHTML=`Voir nos forfaits`};n.addEventListener("click",()=>o(r+1)),o(0)}document.querySelector("#app").innerHTML=`
   <div>
     
-    <img src="/vite.svg" class="logo" alt="Voyance Francophone" />
+    <img src="vite.svg" class="logo" alt="Voyance Francophone" />
     <h1>Voyance Francophone!</h1>
     <p class="read-the-docs">
     <strong>Bienvenue</strong>
