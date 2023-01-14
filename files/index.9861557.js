@@ -10,9 +10,9 @@ function s(n){let r=0;const o=i=>{r=i,n.innerHTML=`Voir nos forfaits`};n.addEven
     <strong>Bienvenue</strong>
     
     </p>
-    <div id="myNav" class="card">
-    xxxxxxxxx
-    <button id="counter" type="button"></button>
+    <div class="card">
+    
+    <button onclick="openNav()" id="counter" type="button"></button>
   
     </div>
   
