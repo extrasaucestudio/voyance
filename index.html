@@ -22,12 +22,11 @@
             --primary-color: #8e44ad;
             --secondary-color: #9b59b6;
             --text-color: #333;
-            --background-color: #f4f4f4;
+            --background-color: rgba(244, 244, 244, 0.8);
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--background-color);
             color: var(--text-color);
             margin: 0;
             padding: 20px;
@@ -36,15 +35,20 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            background-image: url('/files/images/voyancecc.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .content {
             max-width: 800px;
             width: 100%;
             padding: 2rem;
-            background-color: white;
+            background-color: var(--background-color);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            backdrop-filter: blur(5px);
         }
 
         h1, h2, h3 {
@@ -57,14 +61,14 @@
         }
 
         .read-the-docs {
-            background-color: #f9f9f9;
+            background-color: rgba(249, 249, 249, 0.8);
             padding: 1rem;
             border-radius: 8px;
             margin-bottom: 2rem;
         }
 
         form {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -101,10 +105,12 @@
         }
 
         @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
             .content {
                 padding: 1rem;
             }
-
             form {
                 padding: 1rem;
             }
