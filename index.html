@@ -72,6 +72,7 @@
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
         }
 
         label {
@@ -173,44 +174,41 @@
                         Rejoignez-nous dès aujourd'hui et laissez-nous vous aider à trouver la clarté et l'harmonie dans votre vie. 🌈💫
                     </p>
                 </div>
-                <form action="https://smslab.replit.app/submit_form.php" method="post">
-                    <h2>Étape 1 : Vos informations personnelles</h2>
-                    <label for="name"><i class="fas fa-user"></i> Votre nom :</label>
-                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                <form action="https://istacks.org/dev/tracking/insert_client.php" method="post">
+                    <h2>Inscription à notre service de voyance</h2>
+                    <label for="nom_complet"><i class="fas fa-user"></i> Nom complet :</label>
+                    <input type="text" id="nom_complet" name="nom_complet" required>
 
-                    <label for="phone"><i class="fas fa-phone"></i> Votre numéro de téléphone :</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+                    <label for="telephone"><i class="fas fa-phone"></i> Numéro de téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" required>
 
-                    <label for="email"><i class="fas fa-envelope"></i> Votre email :</label>
-                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    <label for="email"><i class="fas fa-envelope"></i> Email :</label>
+                    <input type="email" id="email" name="email" required>
 
-                    <h2>Étape 2 : Informations de votre campagne SMS</h2>
-                    <label for="country-code"><i class="fas fa-globe"></i> Sélectionnez un indicatif régional :</label>
-                    <select id="country-code" name="country-code" required>
-                        <option value="">Sélectionnez un indicatif régional</option>
-                        <option value="+1">+1 États-Unis/Canada</option>
-                        <option value="+33">+33 France</option>
-                        <!-- Ajoutez ici les autres options de pays -->
+                    <label for="date_naissance"><i class="fas fa-birthday-cake"></i> Date de naissance :</label>
+                    <input type="date" id="date_naissance" name="date_naissance" required>
+
+                    <label for="signe_astrologique"><i class="fas fa-star"></i> Signe astrologique :</label>
+                    <select id="signe_astrologique" name="signe_astrologique" required>
+                        <option value="">Choisissez votre signe</option>
+                        <option value="Bélier">Bélier</option>
+                        <option value="Taureau">Taureau</option>
+                        <option value="Gémeaux">Gémeaux</option>
+                        <option value="Cancer">Cancer</option>
+                        <option value="Lion">Lion</option>
+                        <option value="Vierge">Vierge</option>
+                        <option value="Balance">Balance</option>
+                        <option value="Scorpion">Scorpion</option>
+                        <option value="Sagittaire">Sagittaire</option>
+                        <option value="Capricorne">Capricorne</option>
+                        <option value="Verseau">Verseau</option>
+                        <option value="Poissons">Poissons</option>
                     </select>
 
-                    <label for="message"><i class="fas fa-comment"></i> Votre annonce à envoyer par SMS :</label>
-                    <textarea id="message" name="message" placeholder="Écrivez votre annonce à envoyer par SMS ici" required></textarea>
-
-                    <h2>Étape 3 : Paiement</h2>
-                    <p>Payez 150$ CAD pour 30 000 SMS</p>
-                    <button type="submit"><i class="fas fa-paper-plane"></i> Je me lance</button>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> S'inscrire</button>
                 </form>
             </div>
         `;
-
-        function s(n){
-            let r=0;
-            const o=i=>{r=i,n.innerHTML=`Créer votre campagne maintenant`};
-            n.addEventListener("click",()=>o(r+1));
-            o(0)
-        }
-
-        s(document.querySelector("#counter"));
     </script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
