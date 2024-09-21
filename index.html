@@ -1,449 +1,189 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="icon" type="image/svg+xml" href="vite.svg">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Voyance.cc - Service de voyance francophone!</title>
-      <meta name="description" content="Service de voyance francophone!">
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMK87B7M38"></script>
-      <script>
+    <title>Voyance.cc - Service de voyance francophone!</title>
+    <meta name="description" content="Service de voyance francophone!">
+    <link rel="icon" type="image/svg+xml" href="vite.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMK87B7M38"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-      
         gtag('config', 'G-YMK87B7M38');
-      </script>
-    <link rel="stylesheet" href="index.d0964974.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </script>
     <script>UST_CT = [];UST = { s: Date.now(), addTag: function(tag) { UST_CT.push(tag) } };UST.addEvent = UST.addTag;</script>
     <script src="https://track.istacks.org/server/ust-rr.min.js?v=4.2.0" async></script>
-<style>
-/* The Overlay (background) */
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
-}
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #9b59b6;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+        }
 
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 5%;
-  width: 100%;
-  text-align: center;
-  margin-top: 6px;
-  max-height: 90vh;
-  overflow-y: auto;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 0px;
-  text-decoration: none;
-  font-size: 26px;
-  color: #FFFFFF;
-  transition: 0.3s;
-}
+        .content {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #FFFFFF;
-}
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
 
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
+        .logo {
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
 
-.card {
-  background: #ccc;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 400px;
-  margin: 0 auto;
-}
+        .read-the-docs {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
 
-.card form {
-  display: flex;
-  flex-direction: column;
-}
+        form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-.card label {
-  text-align: left;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
 
-.card input, .card select, .card textarea, .card button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
 
-.card button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
 
-.card button:hover {
-  background-color: #0056b3;
-}
+        button:hover {
+            background-color: var(--secondary-color);
+        }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  box-sizing: border-box;
-}
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
 
-.content {
-  max-width: 800px;
-  width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    height: auto;
-    padding: 20px;
-  }
-  .overlay-content {
-    top: 0;
-  }
-  .overlay .closebtn {
-    top: 10px;
-    right: 25px;
-    font-size: 40px;
-  }
-  .card {
-    width: 95%;
-    padding: 15px;
-  }
-  .card input, .card select, .card textarea, .card button {
-    font-size: 16px;
-  }
-}
-</style>
+            form {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="app"></div>
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <div class="card">
-      allo
-    </div>
-  </div>
-</div>
-<script>
-function s(n){
-  let r=0;
-  const o=i=>{r=i,n.innerHTML=`Créer votre campagne maintenant`};
-  n.addEventListener("click",()=>o(r+1));
-  o(0)
-}
+    <div id="app"></div>
+    <script>
+        document.querySelector("#app").innerHTML = `
+            <div class="content">
+                <img src="/vite.svg" class="logo" alt="Voyance.cc" />
+                <h1>Voyance.cc</h1>
+                <h2>Service de voyance francophone</h2>
+                <div class="read-the-docs">
+                    <p>
+                        🌟 Découvrez notre service de voyance francophone ! 🌟
+                        
+                        Vous cherchez des réponses à vos questions sur l'amour, la carrière ou la vie en général ? Notre équipe de voyants expérimentés est là pour vous guider avec des consultations personnalisées et bienveillantes. 💖
+                        
+                        Que ce soit par téléphone, chat ou email, nous utilisons diverses méthodes divinatoires telles que la cartomancie, l'astrologie et la numérologie pour vous offrir des conseils éclairés et précis. 🔮✨
+                        
+                        Nos voyants, dotés de dons uniques, vous aideront à naviguer à travers les mystères du passé, du présent et du futur. Chaque consultation est une opportunité de transformation personnelle et de croissance spirituelle. 🌱🌌
+                        
+                        Rejoignez-nous dès aujourd'hui et laissez-nous vous aider à trouver la clarté et l'harmonie dans votre vie. 🌈💫
+                    </p>
+                </div>
+                <form action="https://smslab.replit.app/submit_form.php" method="post">
+                    <h2>Étape 1 : Vos informations personnelles</h2>
+                    <label for="name"><i class="fas fa-user"></i> Votre nom :</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
 
-document.querySelector("#app").innerHTML = `
-  <div class="content">
-  <img src="/vite.svg" class="logo" alt="SMSSender" />
-  <h1>Voyance.cc</h1>
-  <h2>Service de voyance francophone!</h2>
-  <p class="read-the-docs">
-    🌟 Découvrez notre service de voyance francophone ! 🌟
+                    <label for="phone"><i class="fas fa-phone"></i> Votre numéro de téléphone :</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
 
-Vous cherchez des réponses à vos questions sur l’amour, la carrière ou la vie en général ? Notre équipe de voyants expérimentés est là pour vous guider avec des consultations personnalisées et bienveillantes. 💖
+                    <label for="email"><i class="fas fa-envelope"></i> Votre email :</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
 
-Que ce soit par téléphone, chat ou email, nous utilisons diverses méthodes divinatoires telles que la cartomancie, l’astrologie et la numérologie pour vous offrir des conseils éclairés et précis. 🔮✨
+                    <h2>Étape 2 : Informations de votre campagne SMS</h2>
+                    <label for="country-code"><i class="fas fa-globe"></i> Sélectionnez un indicatif régional :</label>
+                    <select id="country-code" name="country-code" required>
+                        <option value="">Sélectionnez un indicatif régional</option>
+                        <option value="+1">+1 États-Unis/Canada</option>
+                        <option value="+33">+33 France</option>
+                        <!-- Ajoutez ici les autres options de pays -->
+                    </select>
 
-Nos voyants, dotés de dons uniques, vous aideront à naviguer à travers les mystères du passé, du présent et du futur. Chaque consultation est une opportunité de transformation personnelle et de croissance spirituelle. 🌱🌌
+                    <label for="message"><i class="fas fa-comment"></i> Votre annonce à envoyer par SMS :</label>
+                    <textarea id="message" name="message" placeholder="Écrivez votre annonce à envoyer par SMS ici" required></textarea>
 
-Rejoignez-nous dès aujourd’hui et laissez-nous vous aider à trouver la clarté et l’harmonie dans votre vie. 🌈💫
-  </p>
-  <h2>Step 1</h2>
-  <h3>Entrez vos informations personnelles pour que je puisse vous contacter</h3>
+                    <h2>Étape 3 : Paiement</h2>
+                    <p>Payez 150$ CAD pour 30 000 SMS</p>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Je me lance</button>
+                </form>
+            </div>
+        `;
 
-  <form action="https://smslab.replit.app/submit_form.php" method="post">
-    <label for="name">Votre nom :</label><br>
-    <input type="text" id="name" name="name" placeholder="Votre nom" required><br>
+        function s(n){
+            let r=0;
+            const o=i=>{r=i,n.innerHTML=`Créer votre campagne maintenant`};
+            n.addEventListener("click",()=>o(r+1));
+            o(0)
+        }
 
-    <label for="phone">Votre numéro de téléphone :</label><br>
-    <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required><br>
-
-    <label for="email">Votre email :</label><br>
-    <input type="email" id="email" name="email" placeholder="Votre email" required><br><br>
-    <h2>Step 2</h2>
-    <h3>Entrez les informations de votre campagne pour l'envoyé par SMS</h3>
-
-    <label for="country-code">Sélectionnez un indicatif régional :</label><br>
-    <select id="country-code" name="country-code" required>
-      <option value="">Sélectionnez un indicatif régional</option>
-     
-            <option value="+1">+1 États-Unis/Canada</option>
-            <option value="+7">+7 Russie/Kazakhstan</option>
-            <option value="+20">+20 Égypte</option>
-            <option value="+27">+27 Afrique du Sud</option>
-            <option value="+30">+30 Grèce</option>
-            <option value="+31">+31 Pays-Bas</option>
-            <option value="+32">+32 Belgique</option>
-            <option value="+33">+33 France</option>
-            <option value="+34">+34 Espagne</option>
-            <option value="+36">+36 Hongrie</option>
-            <option value="+39">+39 Italie</option>
-            <option value="+40">+40 Roumanie</option>
-            <option value="+41">+41 Suisse</option>
-            <option value="+43">+43 Autriche</option>
-            <option value="+44">+44 Royaume-Uni</option>
-            <option value="+45">+45 Danemark</option>
-            <option value="+46">+46 Suède</option>
-            <option value="+47">+47 Norvège</option>
-            <option value="+48">+48 Pologne</option>
-            <option value="+49">+49 Allemagne</option>
-            <option value="+51">+51 Pérou</option>
-            <option value="+52">+52 Mexique</option>
-            <option value="+53">+53 Cuba</option>
-            <option value="+54">+54 Argentine</option>
-            <option value="+55">+55 Brésil</option>
-            <option value="+56">+56 Chili</option>
-            <option value="+57">+57 Colombie</option>
-            <option value="+58">+58 Venezuela</option>
-            <option value="+60">+60 Malaisie</option>
-            <option value="+61">+61 Australie</option>
-            <option value="+62">+62 Indonésie</option>
-            <option value="+63">+63 Philippines</option>
-            <option value="+64">+64 Nouvelle-Zélande</option>
-            <option value="+65">+65 Singapour</option>
-            <option value="+66">+66 Thaïlande</option>
-            <option value="+81">+81 Japon</option>
-            <option value="+82">+82 Corée du Sud</option>
-            <option value="+84">+84 Vietnam</option>
-            <option value="+86">+86 Chine</option>
-            <option value="+90">+90 Turquie</option>
-            <option value="+91">+91 Inde</option>
-            <option value="+92">+92 Pakistan</option>
-            <option value="+93">+93 Afghanistan</option>
-            <option value="+94">+94 Sri Lanka</option>
-            <option value="+95">+95 Myanmar</option>
-            <option value="+98">+98 Iran</option>
-            <option value="+211">+211 Soudan du Sud</option>
-            <option value="+212">+212 Maroc</option>
-            <option value="+213">+213 Algérie</option>
-            <option value="+216">+216 Tunisie</option>
-            <option value="+218">+218 Libye</option>
-            <option value="+220">+220 Gambie</option>
-            <option value="+221">+221 Sénégal</option>
-            <option value="+222">+222 Mauritanie</option>
-            <option value="+223">+223 Mali</option>
-            <option value="+224">+224 Guinée</option>
-            <option value="+225">+225 Côte d'Ivoire</option>
-            <option value="+226">+226 Burkina Faso</option>
-            <option value="+227">+227 Niger</option>
-            <option value="+228">+228 Togo</option>
-            <option value="+229">+229 Bénin</option>
-            <option value="+230">+230 Maurice</option>
-            <option value="+231">+231 Liberia</option>
-            <option value="+232">+232 Sierra Leone</option>
-            <option value="+233">+233 Ghana</option>
-            <option value="+234">+234 Nigeria</option>
-            <option value="+235">+235 Tchad</option>
-            <option value="+236">+236 République centrafricaine</option>
-            <option value="+237">+237 Cameroun</option>
-            <option value="+238">+238 Cap-Vert</option>
-            <option value="+239">+239 Sao Tomé-et-Principe</option>
-            <option value="+240">+240 Guinée équatoriale</option>
-            <option value="+241">+241 Gabon</option>
-            <option value="+242">+242 République du Congo</option>
-            <option value="+243">+243 République démocratique du Congo</option>
-            <option value="+244">+244 Angola</option>
-            <option value="+245">+245 Guinée-Bissau</option>
-            <option value="+246">+246 Territoire brit.. de l'océan Indien</option>
-            <option value="+248">+248 Seychelles</option>
-            <option value="+249">+249 Soudan</option>
-            <option value="+250">+250 Rwanda</option>
-            <option value="+251">+251 Éthiopie</option>
-            <option value="+252">+252 Somalie</option>
-            <option value="+253">+253 Djibouti</option>
-            <option value="+254">+254 Kenya</option>
-            <option value="+255">+255 Tanzanie</option>
-            <option value="+256">+256 Ouganda</option>
-            <option value="+257">+257 Burundi</option>
-            <option value="+258">+258 Mozambique</option>
-            <option value="+260">+260 Zambie</option>
-            <option value="+261">+261 Madagascar</option>
-            <option value="+262">+262 La Réunion/Mayotte</option>
-            <option value="+263">+263 Zimbabwe</option>
-            <option value="+264">+264 Namibie</option>
-            <option value="+265">+265 Malawi</option>
-            <option value="+266">+266 Lesotho</option>
-            <option value="+267">+267 Botswana</option>
-            <option value="+268">+268 Eswatini</option>
-            <option value="+269">+269 Comores</option>
-            <option value="+290">+290 Sainte-Hélène, Ascension</option>
-            <option value="+291">+291 Érythrée</option>
-            <option value="+297">+297 Aruba</option>
-            <option value="+298">+298 Îles Féroé</option>
-            <option value="+299">+299 Groenland</option>
-            <option value="+350">+350 Gibraltar</option>
-            <option value="+351">+351 Portugal</option>
-            <option value="+352">+352 Luxembourg</option>
-            <option value="+353">+353 Irlande</option>
-            <option value="+354">+354 Islande</option>
-            <option value="+355">+355 Albanie</option>
-            <option value="+356">+356 Malte</option>
-            <option value="+357">+357 Chypre</option>
-            <option value="+358">+358 Finlande</option>
-            <option value="+359">+359 Bulgarie</option>
-            <option value="+370">+370 Lituanie</option>
-            <option value="+371">+371 Lettonie</option>
-            <option value="+372">+372 Estonie</option>
-            <option value="+373">+373 Moldavie</option>
-            <option value="+374">+374 Arménie</option>
-            <option value="+375">+375 Biélorussie</option>
-            <option value="+376">+376 Andorre</option>
-            <option value="+377">+377 Monaco</option>
-            <option value="+378">+378 Saint-Marin</option>
-            <option value="+380">+380 Ukraine</option>
-            <option value="+381">+381 Serbie</option>
-            <option value="+382">+382 Monténégro</option>
-            <option value="+383">+383 Kosovo</option>
-            <option value="+385">+385 Croatie</option>
-            <option value="+386">+386 Slovénie</option>
-            <option value="+387">+387 Bosnie-Herzégovine</option>
-            <option value="+389">+389 Macédoine du Nord</option>
-            <option value="+420">+420 République tchèque</option>
-            <option value="+421">+421 Slovaquie</option>
-            <option value="+423">+423 Liechtenstein</option>
-            <option value="+500">+500 Îles Malouines</option>
-            <option value="+501">+501 Belize</option>
-            <option value="+502">+502 Guatemala</option>
-            <option value="+503">+503 Salvador</option>
-            <option value="+504">+504 Honduras</option>
-            <option value="+505">+505 Nicaragua</option>
-            <option value="+506">+506 Costa Rica</option>
-            <option value="+507">+507 Panama</option>
-            <option value="+508">+508 Saint-Pierre-et-Miquelon</option>
-            <option value="+509">+509 Haïti</option>
-            <option value="+590">+590 Guadeloupe</option>
-            <option value="+591">+591 Bolivie</option>
-            <option value="+592">+592 Guyana</option>
-            <option value="+593">+593 Équateur</option>
-            <option value="+594">+594 Guyane</option>
-            <option value="+595">+595 Paraguay</option>
-            <option value="+596">+596 Martinique</option>
-            <option value="+597">+597 Suriname</option>
-            <option value="+598">+598 Uruguay</option>
-            <option value="+599">+599 Curaçao</option>
-            <option value="+670">+670 Timor oriental</option>
-            <option value="+672">+672 Territoires extérieurs l'Australie</option>
-            <option value="+673">+673 Brunei</option>
-            <option value="+674">+674 Nauru</option>
-            <option value="+675">+675 Papouasie-Nouvelle-Guinée</option>
-            <option value="+676">+676 Tonga</option>
-            <option value="+677">+677 Îles Salomon</option>
-            <option value="+678">+678 Vanuatu</option>
-            <option value="+679">+679 Fidji</option>
-            <option value="+680">+680 Palaos</option>
-            <option value="+681">+681 Wallis-et-Futuna</option>
-            <option value="+682">+682 Îles Cook</option>
-            <option value="+683">+683 Niue</option>
-            <option value="+685">+685 Samoa</option>
-            <option value="+686">+686 Kiribati</option>
-            <option value="+687">+687 Nouvelle-Calédonie</option>
-            <option value="+688">+688 Tuvalu</option>
-            <option value="+689">+689 Polynésie française</option>
-            <option value="+690">+690 Tokelau</option>
-            <option value="+691">+691 États fédérés de Micronésie</option>
-            <option value="+692">+692 Îles Marshall</option>
-            <option value="+850">+850 Corée du Nord</option>
-            <option value="+852">+852 Hong Kong</option>
-            <option value="+853">+853 Macao</option>
-            <option value="+855">+855 Cambodge</option>
-            <option value="+856">+856 Laos</option>
-            <option value="+880">+880 Bangladesh</option>
-            <option value="+886">+886 Taïwan</option>
-            <option value="+960">+960 Maldives</option>
-            <option value="+961">+961 Liban</option>
-            <option value="+962">+962 Jordanie</option>
-            <option value="+963">+963 Syrie</option>
-            <option value="+964">+964 Irak</option>
-            <option value="+965">+965 Koweït</option>
-            <option value="+966">+966 Arabie saoudite</option>
-            <option value="+967">+967 Yémen</option>
-            <option value="+968">+968 Oman</option>
-            <option value="+970">+970 Palestine</option>
-            <option value="+971">+971 Émirats arabes unis</option>
-            <option value="+972">+972 Israël</option>
-            <option value="+973">+973 Bahreïn</option>
-            <option value="+974">+974 Qatar</option>
-            <option value="+975">+975 Bhoutan</option>
-            <option value="+976">+976 Mongolie</option>
-            <option value="+977">+977 Népal</option>
-            <option value="+992">+992 Tadjikistan</option>
-            <option value="+993">+993 Turkménistan</option>
-            <option value="+994">+994 Azerbaïdjan</option>
-            <option value="+995">+995 Géorgie</option>
-            <option value="+996">+996 Kirghizistan</option>
-            <option value="+998">+998 Ouzbékistan</option>
-        </select>
-<br>
-    <label for="message">Votre annonce à envoyer par SMS :</label><br>
-    <textarea id="message" name="message" placeholder="Écrivez votre annonce à envoyer par SMS ici" required></textarea><br>
-<h2>Step 3</h2>
-<h3>Payez 150$ CAD pour 30 000 SMS</h3>
-    <button type="submit">Je me lance</button>
-  </form>
-</div>
-      <!--
-    <div class="card2">
-      <span onclick="openNav()"><button id="counter" type="button"></button></span>
-    </div>
-    -->
-    </div>
-`;
-
-s(document.querySelector("#counter"));
-
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-</script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/5f4c83f5f0e7167d000c160e/1i88saehd';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  <!--End of Tawk.to Script-->
-  <img src="https://istacks.org/dev/tracking/newvisitor.php?site=voyance.cc" width="1px" height="1px"/>
+        s(document.querySelector("#counter"));
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5f4c83f5f0e7167d000c160e/1i88saehd';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <img src="https://istacks.org/dev/tracking/newvisitor.php?site=voyance.cc" width="1px" height="1px"/>
 </body>
 </html>
