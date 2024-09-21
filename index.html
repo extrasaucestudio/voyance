@@ -87,6 +87,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 16px;
+            box-sizing: border-box;
         }
 
         button {
@@ -98,6 +99,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             font-size: 16px;
+            width: 100%;
         }
 
         button:hover {
@@ -113,6 +115,39 @@
             }
             form {
                 padding: 1rem;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .read-the-docs {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            .content {
+                padding: 0.5rem;
+            }
+            form {
+                padding: 0.5rem;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .read-the-docs {
+                font-size: 12px;
+            }
+            input, select, textarea, button {
+                font-size: 14px;
             }
         }
     </style>
