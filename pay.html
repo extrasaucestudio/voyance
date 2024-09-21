@@ -67,44 +67,8 @@
             margin-bottom: 2rem;
         }
 
-        form {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-size: 16px;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: var(--secondary-color);
+        #paypal-container-QEHSJHMPH3GGE {
+            margin-top: 2rem;
         }
 
         @media screen and (max-width: 768px) {
@@ -114,62 +78,27 @@
             .content {
                 padding: 1rem;
             }
-            form {
-                padding: 1rem;
-            }
             h1 {
                 font-size: 24px;
             }
             h2 {
                 font-size: 20px;
             }
-            .read-the-docs {
-                font-size: 14px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            body {
-                padding: 5px;
-            }
-            .content {
-                padding: 0.5rem;
-            }
-            form {
-                padding: 0.5rem;
-            }
-            h1 {
-                font-size: 20px;
-            }
-            h2 {
-                font-size: 18px;
-            }
-            .read-the-docs {
-                font-size: 12px;
-            }
-            input, select, textarea, button {
-                font-size: 14px;
-            }
         }
     </style>
 </head>
-<br>
-    <div id="app"></div>
-    <script>
-        document.querySelector("#app").innerHTML = `
-            <div class="content">
-                <img src="/vite.svg" class="logo" alt="Voyance.cc" />
-                <h1>Voyance.cc</h1>
-                <h2>Merci</h2>
-                <div class="read-the-docs">
-                    
-                </div>
-                
-            </div>
-        `;
-    </script></br>
+<body>
+    <div class="content">
+        <img src="/vite.svg" class="logo" alt="Voyance.cc" />
+        <h1>Voyance.cc</h1>
+        <h2>Merci de payer votre séance</h2>
+        <div class="read-the-docs">
+            <p>Votre séance de voyance est sur le point de commencer. Veuillez procéder au paiement ci-dessous pour confirmer votre réservation.</p>
+        </div>
+        <div id="paypal-container-QEHSJHMPH3GGE"></div>
+    </div>
+
     <script src="https://www.paypal.com/sdk/js?client-id=BAAdMtKI7QS9W_6TN0A0LSA-EabKJJXfKaUjXH-PLpSZHJ1x-bDos9QJc0mOiqLG4AXHH8bRN5FEArMQWE&components=hosted-buttons&disable-funding=venmo&currency=CAD"></script>
-    <div id="paypal-container-QEHSJHMPH3GGE"></div>
     <script>
       paypal.HostedButtons({
         hostedButtonId: "QEHSJHMPH3GGE",
