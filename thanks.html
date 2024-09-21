@@ -2,11 +2,191 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="3;url=https://voyance.cc">
-    <title>Redirection en cours</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyance.cc - Service de voyance francophone!</title>
+    <meta name="description" content="Service de voyance francophone!">
+    <link rel="icon" type="image/svg+xml" href="vite.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMK87B7M38"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YMK87B7M38');
+    </script>
+    <script>UST_CT = [];UST = { s: Date.now(), addTag: function(tag) { UST_CT.push(tag) } };UST.addEvent = UST.addTag;</script>
+    <script src="https://track.istacks.org/server/ust-rr.min.js?v=4.2.0" async></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #9b59b6;
+            --text-color: #333;
+            --background-color: rgba(244, 244, 244, 0.8);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('/files/images/voyancecc.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .content {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            background-color: var(--background-color);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .read-the-docs {
+            background-color: rgba(249, 249, 249, 0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                padding: 1rem;
+            }
+            form {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .read-the-docs {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            .content {
+                padding: 0.5rem;
+            }
+            form {
+                padding: 0.5rem;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .read-the-docs {
+                font-size: 12px;
+            }
+            input, select, textarea, button {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Merci pour votre achats. Vous allez être redirigé dans 3 secondes...</h1>
-    <img src="https://istacks.org/dev/sms/neworder-voyancecc.php" hidden>
+    <div id="app"></div>
+    <script>
+        document.querySelector("#app").innerHTML = `
+            <div class="content">
+                <img src="/vite.svg" class="logo" alt="Voyance.cc" />
+                <h1>Voyance.cc</h1>
+                <h2>Service de voyance francophone</h2>
+                <div class="read-the-docs">
+                    <script src="https://www.paypal.com/sdk/js?client-id=BAAdMtKI7QS9W_6TN0A0LSA-EabKJJXfKaUjXH-PLpSZHJ1x-bDos9QJc0mOiqLG4AXHH8bRN5FEArMQWE&components=hosted-buttons&disable-funding=venmo&currency=CAD"></script>
+<div id="paypal-container-QEHSJHMPH3GGE"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "QEHSJHMPH3GGE",
+  }).render("#paypal-container-QEHSJHMPH3GGE")
+</script>
+                </div>
+                
+            </div>
+        `;
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5f4c83f5f0e7167d000c160e/1i88saehd';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <img src="https://istacks.org/dev/tracking/newvisitor.php?site=voyance.cc/thanks.html" width="1px" height="1px"/>
 </body>
 </html>
