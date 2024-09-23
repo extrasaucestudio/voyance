@@ -1,143 +1,131 @@
 <!DOCTYPE html>
-<html class="no-js" lang="fr">
+<html lang="fr">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyance.cc - Service de voyance francophone!</title>
+    <meta name="description" content="Service de voyance francophone!">
+    <link rel="icon" type="image/svg+xml" href="vite.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMK87B7M38"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YMK87B7M38');
+    </script>
+    <script>UST_CT = [];UST = { s: Date.now(), addTag: function(tag) { UST_CT.push(tag) } };UST.addEvent = UST.addTag;</script>
+    <script src="https://track.istacks.org/server/ust-rr.min.js?v=4.2.0" async></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #9b59b6;
+            --text-color: #333;
+            --background-color: rgba(244, 244, 244, 0.8);
+        }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-    <title>Waxio - WAX Dashboard - Affiliation</title>
-    <link rel="preload" href="files/files/Site.min.css" as="style">
-    <link rel="reload" href="files/files/style.min.css" as="style">
-    <link rel="preload" href="files/sso-theme.min.css" as="style">
-    <link href="files/files/Site.min.css" rel="stylesheet" type="text/css">
-    <link href="files/files/style.min.css" rel="stylesheet" type="text/css">
-    <link href="files/sso-theme.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="files/codebase/suite.js"></script>
-		<link rel="stylesheet" href="files/codebase/suite.css">
-		<link rel="stylesheet" href="files/index.css">
-    <script src='files/menu.js'></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3G6E8QZ28"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('/files/images/voyancecc.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-  gtag('config', 'G-Z3G6E8QZ28');
-</script>
-<script>
-  var url_string = window.location.href;
-  var url = new URL(url_string);
-  var ref = url.searchParams.get("ref") || 'waxquestwax1';
-  var wax_wallet = url.searchParams.get("waxwallet") || 'waxquestwax1';
-  console.log('Wallet: ' + wax_wallet);
-  //console.log(username);
-  //sessionStorage.setItem('ref');
-  //sessionStorage.setItem('wax_wallet');
-  //var wallet = ${wax.userAccount};
-  console.log(sessionStorage.getItem('waxwallet'));
-  const waxwallet = sessionStorage.getItem('waxwallet');
-  
-  console.log(sessionStorage.getItem('affiliatewallet'));
-  const affiliatewallet = sessionStorage.getItem('affiliatewallet');
-  
-  //const affiliate_wallet = url.searchParams.get("ref") || 'waxquestwax1';
-  //const charactername = url.searchParams.get("ref") || 'waxquestwax1';
-  
-  //console.log(charactername):
-  
-  </script>
-  
+        .content {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            background-color: var(--background-color);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .read-the-docs {
+            background-color: rgba(249, 249, 249, 0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        #paypal-container-QEHSJHMPH3GGE {
+            margin-top: 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-<center>
-
-  <!--
-    <div style="height: calc(100% - 121px);" id='layout'>
-	</div>
-	<script>
-		let type = "space";
-		let layout;
-
-		function initLayout() {
-			if (layout) {
-				layout.destructor();
-			}
-			layout = new dhx.Layout("layout", {
-				type: type,
-				cols: [
-					{
-						html: 'xxx'
-					},
-					{
-						html: 'xxx'
-					},
-					{
-						html: 'xxx'
-					}
-				]
-			});
-		}
-
-		initLayout();
-
-		document.querySelector(".dhx_sample-controls").addEventListener("change", function (e) {
-			type = e.target.id;
-			initLayout();
-		});
-	</script>
-  -->
-  
-  
-
-
-
-    <div id="container"> 
-      <header>
-        <br><br><br><br><br>
-        <p>Waxio.io</p>
-        <img src="files/wax.svg" alt="WAX" width="200px" height="200px">
-        <p>WAX Dashboard - Affiliation</p>
-    </header>
-      
-                 
-                <!--   
+    <div class="content">
+        <img src="/vite.svg" class="logo" alt="Voyance.cc" />
+        <h1>Voyance.cc</h1>
+        <h2>Affiliation</h2>
+        <div class="read-the-docs">
+            <p>Programme d’Affiliation SMSsender.org
+                Rejoignez notre programme d’affiliation et commencez à gagner des commissions dès aujourd’hui ! En tant qu’affilié de SMSsender.org, vous pouvez gagner 20% de commission sur chaque référence qui réserve une séance de voyance via votre lien d’affiliation.
                 
-                <script>
-                  const popup = new dhx.Popup({
-                    css: "dhx_widget--border-shadow custom-class"
-                  });
-            
-                  popup.attachHTML('<iframe name="iframe" src="https://waxrush.com" width="500px" height="500px"></iframe>');
-            
-                  document.querySelector("#show").addEventListener("click", function () {
-                    popup.show("show");
-                  });
-                </script>
-
-     
-         <script>
-      const windowHtml = '<strong><a href="http://play.remixworlds.com" target="iframe">FreeCityGame</a> - <a href="http://waxquest.com.ngrok.io/" target="iframe">WaxQuest</a> - <a href="https://waxrush.com" target="iframe">WaxRush</a> - <a href="https://remixdapp.vercel.app" target="iframe">dApp</a></strong><br><br><iframe name="iframe" src="index.html" width="100%" height="90%"></iframe>';
-
-      const dhxwindow = new dhx.Window({
-  width: 1250,
-  height: 700,
-  closable: false,
-  movable: true,
-  modal: false,
-  title: 'RemixWorlds Dashboard - Wallet: ' + wax_wallet,
-  html: windowHtml
-});
-
-dhxwindow.show();
-</script>
-
-      -->           
-  
-
+                Comment ça marche ?
+                Inscrivez-vous : Rejoignez notre programme d’affiliation en quelques clics.
+                Partagez votre lien : Recevez un lien d’affiliation unique à partager avec votre audience.
+                Gagnez des commissions : Pour chaque personne qui utilise votre lien pour réserver une séance de voyance, vous gagnez 20% de commission.
+                
+                Pourquoi devenir affilié ?
+                Gains attractifs : Profitez d’une commission généreuse de 20% sur chaque référence réussie.
+                Support dédié : Accédez à des ressources et à un support pour maximiser vos gains.
+                Suivi en temps réel : Suivez vos performances et vos commissions en temps réel grâce à notre tableau de bord affilié.
+                
+                Rejoignez-nous dès aujourd’hui !
+                Ne manquez pas cette opportunité de monétiser votre audience tout en offrant un service précieux. Inscrivez-vous maintenant et commencez à gagner des commissions avec SMSsender.org !
+                
+                Pour toute question ou assistance, n’hésitez pas à nous contacter à info@jordanbourbonnais.com</p>
+        </div>
+        
     </div>
-    <footer align="center">
-
-    </footer>
-    </center>
-    </body>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5f4c83f5f0e7167d000c160e/1i8arf11u';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <img src="https://istacks.org/dev/tracking/newvisitor.php?site=voyance.cc/affiliation.html" width="1px" height="1px"/>
+</body>
 </html>
